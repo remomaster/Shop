@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Sali from Laravel
                 </div>
 
                 <div class="links">
