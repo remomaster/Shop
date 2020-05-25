@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Schuhe;
+use App\Shoe;
 use Illuminate\Http\Request;
 
-class SchuheController extends Controller
+class ShoeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class SchuheController extends Controller
     public function index()
     {
         return view('shop.all', [
-            'products' => Schuhe::all(),
+            'products' => Shoe::all(),
         ]);
     }
 
@@ -25,7 +25,7 @@ class SchuheController extends Controller
      * @param  \App\Schuhe  $schuhe
      * @return \Illuminate\Http\Response
      */
-    public function show(Schuhe $product)
+    public function show(Shoe $product)
     {
         return view('shop.detail', [
             'product' => $product,

@@ -6,10 +6,10 @@
 
 <div>
     <img src="{{ url('/img/P2601_03.jpg') }}" />
-    <p>Erscheinungsjahr: {{ $product->erscheinungsjahr }}</p>
-    <p>Farbe: {{ $product->farbe }}</p>
-    <p>Grösse: {{ $product->grosse}}</p>
-    <p>Marke:</p>
+    <p>Erscheinungsjahr: {{ $product->year }}</p>
+    <p>Farbe: {{ $product->color }}</p>
+    <p>Grösse: {{ $product->size}}</p>
+    <p>Marke:</p> {{ }}
 </div>
 
 @endsection

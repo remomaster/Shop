@@ -17,5 +17,5 @@ Route::get('/', function () {
     return redirect()->route('shop.all');
 });
 
-Route::get('/shop', 'SchuheController@index')->name('shop.all');
-Route::get('/shop/{product}', 'SchuheController@show')->name('shop.product');
+Route::get('/shop', 'ShoeController@index')->name('shop.all');
+Route::get('/shop/{product}', 'ShoeController@show')->name('shop.product');
