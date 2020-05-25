@@ -14,28 +14,9 @@ class SchuheController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return view('shop.all', [
+            'products' => Schuhe::all(),
+        ]);
     }
 
     /**
@@ -44,42 +25,10 @@ class SchuheController extends Controller
      * @param  \App\Schuhe  $schuhe
      * @return \Illuminate\Http\Response
      */
-    public function show(Schuhe $schuhe)
+    public function show(Schuhe $product)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Schuhe  $schuhe
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Schuhe $schuhe)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Schuhe  $schuhe
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Schuhe $schuhe)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Schuhe  $schuhe
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Schuhe $schuhe)
-    {
-        //
+        return view('shop.detail', [
+            'product' => $product,
+        ]);
     }
 }
