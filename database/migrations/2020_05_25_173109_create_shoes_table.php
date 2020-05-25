@@ -21,8 +21,9 @@ class CreateShoesTable extends Migration
             $table->string('year');
             $table->string('color');
             $table->string('size');
+			$table->string('pictureUrl')->nullable();
 
-            $table->foreignId('brands_id')->constrained();
+            $table->foreignId('brand_id')->constrained();
         });
     }
 
