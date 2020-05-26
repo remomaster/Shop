@@ -2,14 +2,19 @@
 
 @section('content')
 
-<div class="h1 my-3">Schuh: {{ $product->name }}</div>
+<div>	
+      <div class="col-lg-9">
 
-<div>
-    <img src="{{ url('/img/P2601_03.jpg') }}" />
-    <p>Erscheinungsjahr: {{ $product->year }}</p>
-    <p>Farbe: {{ $product->color }}</p>
-    <p>Grösse: {{ $product->size}}</p>
-    <p>Marke:</p> {{ }}
+        <div class="card mt-4">
+          <img class="card-img-top img-fluid" src="{{ url('/img/P2601_03.jpg') }}" alt="">
+          <div class="card-body">
+            <h3 class="card-title">Schuh: {{ $product->name }}</h3>
+            <h4>Preis: {{ $product->price }}</h4>
+			<h4>Farbe: {{ $product->color }}</h4>
+			<h4>Grösse: {{ $product->size}}</h4>
+          </div>
+        </div>
+      </div>
 </div>
 
 @endsection
