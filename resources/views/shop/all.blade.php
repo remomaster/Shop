@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="h1 my-3">Shop</div>
-<a href="{{ route('shoppingcart.index') }}">Shoppingcart</a>
+<a href="{{ route('shoppingcart.index') }}">Warenkorb</a>
 
 <div>
 @foreach($products as $product)	 <div class="row">
@@ -14,10 +14,10 @@
                 <h4 class="card-title">
                   <a href="{{ route('shop.product', $product->id) }}">{{ $product->name }}</a>
 				  <form method="post" action="{{ route('addProduct', $product) }}" >
-                        @csrf
-                        @method('PUT')
-                        <input type="submit" value="add To Cart" />
-                    </form>
+                    @csrf
+                    @method('PUT')
+                    <input type="submit" value="Zum Warenkorb hinzufügen" />
+                </form>
                 </h4>
                 <h5>{{ $product->price }}.-</h5>
               </div>

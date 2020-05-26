@@ -3,7 +3,7 @@
 @section('content')
 
 <div>	
-	<a href="{{ route('shoppingcart.index') }}">Shoppingcart</a>
+		<a href="{{ route('shoppingcart.index') }}">Warenkorb</a>
       <div class="col-lg-9">
         <div class="card mt-4">
           <img class="card-img-top img-fluid" src="{{ url('/img/P2601_03.jpg') }}" alt="">
