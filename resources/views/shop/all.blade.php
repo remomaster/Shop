@@ -6,18 +6,25 @@
 <a href="{{ route('shoppingcart.index') }}">Shoppingcart</a>
 
 <div>
-@foreach($products as $product)
-    <div class="d-flex m-2">
-        <div class="h6">{{ $product->name }}</div>
-        <img src="{{ url('/img/P2601_03.jpg') }}" />
-        <a href="{{ route('shop.product', $product->id) }}">go</a>
-        <form method="post" action="{{ route('addProduct', $product) }}" >
-            @csrf
-            @method('PUT')
+@foreach($products as $product)	 <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="{{ url('/img/P2601_03.jpg') }}"></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="{{ route('shop.product', $product->id) }}">{{ $product->name }}</a>
+				  <form method="post" action="{{ route('addProduct', $product) }}" >
+                        @csrf
+                        @method('PUT')
+                        <input type="submit" value="add To Cart" />
+                    </form>
+                </h4>
+                <h5>{{ $product->price }}.-</h5>
+              </div>
+            </div>
+          </div>
 
-            <input type="submit" value="add To Cart" />
-        </form>
-    </div>
+        </div>
 @endforeach
 </div>
 @endsection
