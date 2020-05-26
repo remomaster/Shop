@@ -17,5 +17,8 @@ Route::get('/', function () {
     return redirect()->route('shop.all');
 });
 
+
+Route::get('/shop/cart', 'ShoppingCartController@cart')->name('shoppingcart.index');
+Route::put('/shop/cart/add/{product}', 'ShoppingCartController@addToCart')->name('addProduct');
 Route::get('/shop', 'ShoeController@index')->name('shop.all');
 Route::get('/shop/{product}', 'ShoeController@show')->name('shop.product');

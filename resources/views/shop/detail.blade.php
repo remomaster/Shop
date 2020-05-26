@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="h1 my-3">Schuh: {{ $product->name }}</div>
+<a href="{{ route('shoppingcart.index') }}">Shoppingcart</a>
 
 <div>
     <img src="{{ url('/img/P2601_03.jpg') }}" />
