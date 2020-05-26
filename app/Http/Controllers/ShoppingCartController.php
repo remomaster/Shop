@@ -22,8 +22,20 @@ class ShoppingCartController extends Controller
     }
 
     public function cart(){
+        if(!session()->has('cart')){
+            session(['cart' => collect()]);
+        }
+        $val = 0;
+        foreach(session('cart') as $product) $val += $product->price;
+
         return view('shoppingCart.index', [
             'products' => session('cart'),
+            'total' => $val,
         ]);
+    }
+
+    public function buy(){
+        session(['cart' => collect()]);
+        return back();
     }
 }

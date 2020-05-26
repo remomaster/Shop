@@ -20,8 +20,23 @@
         <td class="col">
             {{ $product->name }}
         </td>
+        <td class="col">
+            {{ $product->price }}.-
+        </td>
     </tr>
 @endforeach
+    <tr class="row">
+        <td class="col-1"></td>
+        <td class="col"></td>
+        <td class="col">{{ $total }}.-</td>
+    </tr>
+    
     </tbody>
 </table>
+        <form method="post" action="{{ route('buy') }}">
+            @csrf 
+            @method('post')
+            
+            <input type="submit" value="!!! KAUFEN !!!" class="btn btn-primary btn-block" />
+        </form>
 @endsection

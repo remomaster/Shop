@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 
+Route::post('/shop/cart/buy', 'ShoppingCartController@buy')->name('buy');
 Route::get('/shop/cart', 'ShoppingCartController@cart')->name('shoppingcart.index');
 Route::put('/shop/cart/add/{product}', 'ShoppingCartController@addToCart')->name('addProduct');
 Route::get('/shop', 'ShoeController@index')->name('shop.all');
