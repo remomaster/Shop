@@ -33,10 +33,10 @@
     
     </tbody>
 </table>
-        <form method="post" action="{{ route('buy') }}">
+        <form method="post" action="{{ route('shoppingcart.buy') }}">
             @csrf 
             @method('post')
-            
+
             <input type="submit" value="!!! KAUFEN !!!" class="btn btn-primary btn-block" />
         </form>
 @endsection
