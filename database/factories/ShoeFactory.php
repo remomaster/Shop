@@ -11,6 +11,9 @@ $factory->define(Shoe::class, function (Faker $faker) {
         'year' => $faker->year,
         'color' => $faker->colorName,
         'size' => $faker->numberBetween(30,50),
+		'count' => $faker->randomDigit,
+		'price' => $faker->numberBetween(1,700),
+		
         'brand_id' => App\Brand::all()->random(),
     ];
 });
