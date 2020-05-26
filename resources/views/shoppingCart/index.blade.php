@@ -4,11 +4,24 @@
 
 <div class="h1 my-3">Shoppingcart </div>
 
-<div>
+<table class="table">
+    <thead>
+        <tr class="row">
+            <th class="col-1 ">Id</th>
+            <th class="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
 @foreach($products as $product)
-    <div class="d-flex m-2">
-        {{ $product->name }}
-    </div>
+    <tr class="row">
+        <td class="col-1">
+            {{ $product->id }} 
+        </td>
+        <td class="col">
+            {{ $product->name }}
+        </td>
+    </tr>
 @endforeach
-</div>
+    </tbody>
+</table>
 @endsection

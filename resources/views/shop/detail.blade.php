@@ -10,6 +10,8 @@
     <p>Erscheinungsjahr: {{ $product->year }}</p>
     <p>Farbe: {{ $product->color }}</p>
     <p>Grösse: {{ $product->size}}</p>
+    <p>Preis: {{ $product->price}}</p>
+    <p>An lager: {{ $product->count}}</p>
     <p>Marke: {{ $product->brand->title }}</p>
 </div>
 
