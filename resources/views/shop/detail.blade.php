@@ -9,7 +9,7 @@
     <p>Erscheinungsjahr: {{ $product->year }}</p>
     <p>Farbe: {{ $product->color }}</p>
     <p>Grösse: {{ $product->size}}</p>
-    <p>Marke:</p> {{ }}
+    <p>Marke: {{ $product->brand->title }}</p>
 </div>
 
 @endsection
